@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web D&D Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>⚔️ VTT D&D Campaign Board</h1>
+        </header>
+
+        <main>
+            <!-- Virtual Tabletop Grid Canvas -->
+            <div id="canvas-container">
+                <canvas id="mapCanvas" width="600" height="400"></canvas>
+            </div>
+
+            <!-- Campaign Controls Sidebar -->
+            <aside id="controls">
+                <section class="control-box">
+                    <h3>Character Creation</h3>
+                    <form id="character-form">
+                        <input type="text" id="char-name" placeholder="Hero Name" required>
+                        <select id="char-class">
+                            <option value="Fighter">Fighter</option>
+                            <option value="Wizard">Wizard</option>
+                            <option value="Rogue">Rogue</option>
+                            <option value="Cleric">Cleric</option>
+                        </select>
+                        <button type="submit">Spawn Token</button>
+                    </form>
+                </section>
+
+                <section class="control-box">
+                    <h3>Party Roster</h3>
+                    <ul id="player-list"></ul>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
